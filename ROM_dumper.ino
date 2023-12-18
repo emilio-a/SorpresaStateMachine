@@ -345,7 +345,7 @@ while(1)
         {
         if (strcmp_P(recibidos,CMD_ECO)==0)  //ejecuto si el campo=ECO
             { 
-            Serial.println("eco");  //el comando es eco, envío un eco.  
+            Serial.println("ok");  //el comando es eco, envío un eco.  
             }
         else if (strcmp_P(recibidos,CMD_V)==0)  //ejecuto si el campo=VERSION
             { 
