@@ -8,7 +8,7 @@ Una máquina de estados finitos armada con una memoria rom paralela random, un l
 ![prt](https://github.com/ClubElectronicaVolta/SorpresaStateMachine/assets/145802194/ea2b97de-06d0-43e7-a9f4-388c5b175a6a)
 
 
-## ROM DUMPING APPARATUS...para leer la ROM
+## ROM DUMPING APPARATUS...para leer la ROM y/o escribir una RAM usando el python script MachineMulator
 
 ![romdmp](https://github.com/ClubElectronicaVolta/SorpresaStateMachine/assets/145802194/ee7d1a82-9fe8-4987-b7a1-d269e6c6271f)
 
