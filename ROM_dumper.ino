@@ -97,7 +97,8 @@ pinMode(pin_D6, INPUT);
 pinMode(pin_D7, INPUT);
 
 Serial.begin(9600);
-Serial.println("Ok");
+Serial.print("Ok");
+Serial.print('\n');
 }
 
 //-------- rutina que chequea num en arreglo y convierte si no es mayor que coso ---------
@@ -323,7 +324,8 @@ while(1)
              out_add=(int)strtol(arg_dos, endptr, 16);     //convierto el primer campo que debe ser address
              out_data = (uint8_t)strtol(arg_tres, endptr, 16); //convierto el segundo campo, data
              escribe_ram(out_add, out_data);
-             Serial.println("ok");
+             Serial.print("ok");
+             Serial.print('\n');
              }      
           }
         else    //se trata de una cadena de dos campos, M1,215<CR>
@@ -332,11 +334,13 @@ while(1)
             {
             out_add=(int)strtol(arg_dos, endptr, 16);
             in_data=lee_ram(out_add);     //leo el dato de la direccion de la RAM
-            Serial.println(in_data, HEX);
+            Serial.print(in_data, HEX);
+            Serial.print('\n')
             }
           else if (strcmp_P(arg_uno,CMD_G)==0)  // comando = goto
             {
-            Serial.println("ok");
+            Serial.print("ok");
+            Serial.print('\n');
             //TODO 
             }
           }//cierre else argdos
@@ -345,11 +349,13 @@ while(1)
         {
         if (strcmp_P(recibidos,CMD_ECO)==0)  //ejecuto si el campo=ECO
             { 
-            Serial.println("ok");  //el comando es eco, envío un eco.  
+            Serial.print("ok");  //el comando es eco, envío un eco.
+            Serial.print('\n');
             }
         else if (strcmp_P(recibidos,CMD_V)==0)  //ejecuto si el campo=VERSION
             { 
-            Serial.println(VERSION);  //el comando es version.  
+            Serial.print(VERSION);  //el comando es version.  
+            Serial.print('\n');
             }   
         }//cierre else un solo campo
       }// if arguno!=nul
